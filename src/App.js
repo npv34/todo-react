@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import TodoList from "./components/todos/todo-list/TodoList";
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import {styled} from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Grid
+          container
+          spacing={2}
+          justifyContent="center"
+      >
+          <Grid item xs={5}>
+              <TodoList/>
+          </Grid>
+      </Grid>
   );
 }
 
